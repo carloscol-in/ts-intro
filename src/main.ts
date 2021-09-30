@@ -42,3 +42,4 @@ userInfo = `
     isPro: ${isPro}
 `;
 console.log('userInfo', userInfo);
+
