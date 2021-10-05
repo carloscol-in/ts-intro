@@ -1,4 +1,7 @@
 {
+  "rules": {
+    "no-angle-bracket-type-assertion": true
+  },
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
