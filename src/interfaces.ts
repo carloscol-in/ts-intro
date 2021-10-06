@@ -30,3 +30,35 @@ showPicture({
     orientation: PhotoOrientation.Portrait,
     // test: true // error
 });
+
+interface PictureConfig {
+    title?: string,
+    date?: string,
+    orientation?: PhotoOrientation
+}
+
+function generatePicture(config: PictureConfig) {
+    const pic = {
+        title: 'Default',
+        date: '2020-01-01',
+        orientation: '100x100'
+    };
+
+    if (config.title) pic.title = config.title;
+
+    if (config.date) pic.date = config.date;
+
+    return pic
+}
+
+let picture = generatePicture({});
+console.log('picture', picture);
+picture = generatePicture({
+    title: 'Forest'
+});
+console.log('picture', picture);
+picture = generatePicture({
+    title: 'Forest',
+    date: '2021-10-05'
+});
+console.log('picture', picture);
