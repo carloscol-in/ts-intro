@@ -62,3 +62,21 @@ picture = generatePicture({
     date: '2021-10-05'
 });
 console.log('picture', picture);
+
+// interface
+interface User {
+    readonly id: number, // read only
+    username: string,
+    isPro: boolean
+}
+
+let user: User;
+user = {
+    id: 10,
+    username: 'abcdef',
+    isPro: true
+};
+console.log('user', user);
+user.username = 'uvwxyz';
+// user.id = 100; // shouldn't be allowed
+console.log('user', user);
